@@ -1,0 +1,13 @@
+[org 0x0100]
+
+mov ax , 9
+
+mov cx , 4
+
+ok:
+    shr ax , 1
+    dec cx
+    jnz ok
+
+mov ax , 0x4c00
+int 0x21
